@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import CoreDataServices
 
-class QuestionsParser: Parser {
+class QuestionParserNoProtection: Parser {
     
     //MARK: Questions
     
@@ -50,11 +50,19 @@ class QuestionsParser: Parser {
             question?.questionID = questionID
         }
         
+        /*----------------*/
+        
         question?.title = questionResponse["title"] as? String
+        
+        /*----------------*/
         
         let authorResponse = questionResponse["owner"] as! Dictionary<String, AnyObject>
         
-        question?.author = authorResponse["display_name"] as? String
+        let userParser = UserParserNoProtection(managedObjectContext: self.localManagedObjectContext)
+        
+        question?.author = userParser.parseUser(authorResponse)
+        
+        /*----------------*/
         
         return question!
     }

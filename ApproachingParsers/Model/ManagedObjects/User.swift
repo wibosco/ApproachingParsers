@@ -1,5 +1,5 @@
 //
-//  Question.swift
+//  User.swift
 //  ApproachingParsers
 //
 //  Created by William Boles on 14/04/2016.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Question: NSManagedObject {
+class User: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

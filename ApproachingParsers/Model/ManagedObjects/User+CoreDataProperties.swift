@@ -1,5 +1,5 @@
 //
-//  Question+CoreDataProperties.swift
+//  User+CoreDataProperties.swift
 //  ApproachingParsers
 //
 //  Created by William Boles on 14/04/2016.
@@ -12,12 +12,10 @@
 import Foundation
 import CoreData
 
-extension Question {
+extension User {
 
-    @NSManaged var index: NSNumber?
-    @NSManaged var questionID: NSNumber?
-    @NSManaged var title: String?
-    @NSManaged var page: Page?
-    @NSManaged var author: User?
+    @NSManaged var name: String?
+    @NSManaged var userID: NSNumber?
+    @NSManaged var question: NSSet?
 
 }

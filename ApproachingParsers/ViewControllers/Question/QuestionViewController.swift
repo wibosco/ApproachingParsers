@@ -125,7 +125,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         let question = self.fetchedResultsController.fetchedObjects![indexPath.row] as! Question
         
         cell.titleLabel.text = question.title
-        cell.authorLabel.text = question.author
+        cell.authorLabel.text = question.author!.name
         
         /*---------------------*/
         
