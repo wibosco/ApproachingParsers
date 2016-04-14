@@ -69,7 +69,7 @@ class QuestionParserGuardAndNil: Parser {
         
         /*----------------*/
         
-        let userParser = UserParserNoProtection(managedObjectContext: self.localManagedObjectContext)
+        let userParser = UserParserGuardAndNil(managedObjectContext: self.localManagedObjectContext)
         
         question?.author = userParser.parseUser(authorResponse)
         
