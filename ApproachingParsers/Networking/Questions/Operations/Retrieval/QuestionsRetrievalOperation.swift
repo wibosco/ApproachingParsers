@@ -41,8 +41,8 @@ class QuestionsRetrievalOperation: NSOperation {
             let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<String, AnyObject>
             
             ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait({ () -> Void in
-                let parser = QuestionParserNoProtection(managedObjectContext: ServiceManager.sharedInstance.backgroundManagedObjectContext)
-                let page = parser.parseQuestions(jsonResponse) as Page
+                let parser = QuestionParserGuardAndNil(managedObjectContext: ServiceManager.sharedInstance.backgroundManagedObjectContext)
+                let page = parser.parseQuestions(jsonResponse)!
                 
                 do {
                     print("self.feedID: \(self.feedID)")
