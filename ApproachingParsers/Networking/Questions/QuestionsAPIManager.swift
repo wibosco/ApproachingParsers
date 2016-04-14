@@ -14,7 +14,7 @@ class QuestionsAPIManager: NSObject {
         var url: NSURL
         
         if (feed.pages!.count > 0) {
-            let page = feed.orderedPages().lastObject as! Page
+            let page = feed.orderedPages().last!
             
             url = NSURL(string: page.nextHref!)!
         } else {
