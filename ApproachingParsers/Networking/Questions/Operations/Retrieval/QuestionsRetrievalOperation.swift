@@ -38,7 +38,7 @@ class QuestionsRetrievalOperation: NSOperation {
         super.main()
     
         do {
-            let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<String, AnyObject>
             
             ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait({ () -> Void in
                 let parser = QuestionsParser(managedObjectContext: ServiceManager.sharedInstance.backgroundManagedObjectContext)
@@ -113,8 +113,8 @@ class QuestionsRetrievalOperation: NSOperation {
     func reorderIndexes(feed: Feed) {
         let pages = feed.orderedPages()
         
-        for (var index = 0; index < pages.count; index++) {
-            let page = pages[index] as! Page
+        for index in (0..<pages.count) {
+            let page = pages[index]
             page.index = index
         }
     }

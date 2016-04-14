@@ -14,13 +14,13 @@ class QuestionsParser: Parser {
     
     //MARK: Questions
     
-    func parseQuestions(questionsRetrievalResponse: NSDictionary) -> Page {
+    func parseQuestions(questionsRetrievalResponse: Dictionary<String, AnyObject>) -> Page {
         let page = NSEntityDescription.insertNewObjectForEntity(Page.self, managedObjectContext: self.localManagedObjectContext) as! Page
         
         let questionResponses = questionsRetrievalResponse["items"]
         
-        for (var index = 0; index < questionResponses!.count; index++) {
-            let questionResponse = questionResponses![index] as! NSDictionary
+        for index in (0..<questionResponses!.count) {
+            let questionResponse = questionResponses![index] as! Dictionary<String, AnyObject>
             
             let question = self.parseQuestion(questionResponse)
             question.index = index
@@ -37,7 +37,7 @@ class QuestionsParser: Parser {
     
     //MARK: Question
     
-    func parseQuestion(questionResponse: NSDictionary) -> Question {
+    func parseQuestion(questionResponse: Dictionary<String, AnyObject>) -> Question {
         let questionID = questionResponse["question_id"] as! NSInteger
         
         let predicate = NSPredicate(format: "questionID == \(questionID)")
@@ -52,7 +52,7 @@ class QuestionsParser: Parser {
         
         question?.title = questionResponse["title"] as? String
         
-        let authorResponse = questionResponse["owner"] as! NSDictionary
+        let authorResponse = questionResponse["owner"] as! Dictionary<String, AnyObject>
         
         question?.author = authorResponse["display_name"] as? String
         

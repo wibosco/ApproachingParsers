@@ -26,10 +26,10 @@ class Feed: NSManagedObject {
     
     //MARK: Pages
     
-    func orderedPages() -> NSArray {
+    func orderedPages() -> Array<Page> {
         let indexSort = NSSortDescriptor(key: "index", ascending: true)
         
-        return (self.pages?.sortedArrayUsingDescriptors([indexSort]))!
+        return self.pages?.sortedArrayUsingDescriptors([indexSort]) as! Array<Page>
     }
     
     func addPage(page: Page) {
