@@ -41,10 +41,12 @@ class QuestionsRetrievalOperation: NSOperation {
             let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<String, AnyObject>
             
             ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait({ () -> Void in
-                let parser = QuestionParserGuardAndNil(managedObjectContext: ServiceManager.sharedInstance.backgroundManagedObjectContext)
-                let page = parser.parseQuestions(jsonResponse)!
                 
                 do {
+                    
+                    let parser = QuestionParserThrows(managedObjectContext: ServiceManager.sharedInstance.backgroundManagedObjectContext)
+                    let page = try parser.parseQuestions(jsonResponse)
+                    
                     print("self.feedID: \(self.feedID)")
                     
                     let feed = try ServiceManager.sharedInstance.backgroundManagedObjectContext.existingObjectWithID(self.feedID) as! Feed
@@ -69,7 +71,7 @@ class QuestionsRetrievalOperation: NSOperation {
                     ServiceManager.sharedInstance.saveBackgroundManagedObjectContext()
                     
                 } catch let error as NSError {
-                    print("Failed to load: \(error.localizedDescription)")
+                    print("Failed to parse: \(error.localizedDescription)")
                     
                     self.callBackQueue.addOperationWithBlock({ () -> Void in
                         if (self.completion != nil) {

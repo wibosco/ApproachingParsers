@@ -11,6 +11,7 @@ import CoreData
 import CoreDataServices
 
 class UserParserGuardAndNil: Parser {
+    
     //MARK: User
     
     func parseUser(userResponse: Dictionary<String, AnyObject>) -> User? {

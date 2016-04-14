@@ -23,4 +23,18 @@ class Parser: NSObject {
         
         super.init()
     }
+    
+    //MARK: NonOptional
+    
+    enum ParsingError: ErrorType {
+        case ExpectedValueNil(parameter: String)
+    }
+    
+    func valueForNonOptionalProperty(response: Dictionary<String, AnyObject>, key: String) throws -> AnyObject{
+        guard let valueForNonOptionalProperty = response[key] else {
+            throw ParsingError.ExpectedValueNil(parameter: key)
+        }
+        
+        return valueForNonOptionalProperty
+    }
 }
