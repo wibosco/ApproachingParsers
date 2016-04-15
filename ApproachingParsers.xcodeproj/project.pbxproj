@@ -33,12 +33,14 @@
 		4355D3BE1CBEAD8500A79980 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D39F1CBEAD8500A79980 /* Page.swift */; };
 		4355D3C11CBEAD8500A79980 /* ApproachingParsers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3A31CBEAD8500A79980 /* ApproachingParsers.xcdatamodeld */; };
 		4355D3C21CBEAD8500A79980 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3A81CBEAD8500A79980 /* Parser.swift */; };
-		4355D3C31CBEAD8500A79980 /* QuestionsRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3AC1CBEAD8500A79980 /* QuestionsRetrievalOperation.swift */; };
 		4355D3C51CBEAD8500A79980 /* QuestionsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3B01CBEAD8500A79980 /* QuestionsAPIManager.swift */; };
 		4355D3C61CBEAD8500A79980 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3B41CBEAD8500A79980 /* QuestionTableViewCell.swift */; };
 		4355D3C71CBEAD8500A79980 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3B51CBEAD8500A79980 /* QuestionViewController.swift */; };
 		4355D3CB1CBEAD8D00A79980 /* ApproachingParsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355D3C91CBEAD8D00A79980 /* ApproachingParsersTests.swift */; };
 		4355D3CC1CBEAD8D00A79980 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4355D3CA1CBEAD8D00A79980 /* Info.plist */; };
+		43EFA9271CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFA9261CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift */; };
+		43EFA9291CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFA9281CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift */; };
+		43EFA92B1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFA92A1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift */; };
 		E0D710FD46DD318681E404F1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52256CA3740CB9C98F28BBB2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,12 +77,14 @@
 		4355D39F1CBEAD8500A79980 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		4355D3A41CBEAD8500A79980 /* ApproachingParsers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApproachingParsers.xcdatamodel; sourceTree = "<group>"; };
 		4355D3A81CBEAD8500A79980 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		4355D3AC1CBEAD8500A79980 /* QuestionsRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsRetrievalOperation.swift; sourceTree = "<group>"; };
 		4355D3B01CBEAD8500A79980 /* QuestionsAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsAPIManager.swift; sourceTree = "<group>"; };
 		4355D3B41CBEAD8500A79980 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		4355D3B51CBEAD8500A79980 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		4355D3C91CBEAD8D00A79980 /* ApproachingParsersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproachingParsersTests.swift; sourceTree = "<group>"; };
 		4355D3CA1CBEAD8D00A79980 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EFA9261CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsRetrievalOperationThrowsParser.swift; sourceTree = "<group>"; };
+		43EFA9281CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsRetrievalOperationNoProtectionParser.swift; sourceTree = "<group>"; };
+		43EFA92A1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsRetrievalOperationGuardAndNilParser.swift; sourceTree = "<group>"; };
 		52256CA3740CB9C98F28BBB2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D52A4741A06C61642250E2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F4BFB2D31C8227FB00DECA5E /* ApproachingParsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApproachingParsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,7 +294,9 @@
 		4355D3AB1CBEAD8500A79980 /* Retrieval */ = {
 			isa = PBXGroup;
 			children = (
-				4355D3AC1CBEAD8500A79980 /* QuestionsRetrievalOperation.swift */,
+				43EFA9231CC0F78000D496CE /* GuardAndNil */,
+				43EFA9241CC0F78000D496CE /* NoProtection */,
+				43EFA9251CC0F78000D496CE /* Throws */,
 			);
 			path = Retrieval;
 			sourceTree = "<group>";
@@ -337,6 +343,30 @@
 				4355D3CA1CBEAD8D00A79980 /* Info.plist */,
 			);
 			path = ApproachingParsersTests;
+			sourceTree = "<group>";
+		};
+		43EFA9231CC0F78000D496CE /* GuardAndNil */ = {
+			isa = PBXGroup;
+			children = (
+				43EFA92A1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift */,
+			);
+			path = GuardAndNil;
+			sourceTree = "<group>";
+		};
+		43EFA9241CC0F78000D496CE /* NoProtection */ = {
+			isa = PBXGroup;
+			children = (
+				43EFA9281CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift */,
+			);
+			path = NoProtection;
+			sourceTree = "<group>";
+		};
+		43EFA9251CC0F78000D496CE /* Throws */ = {
+			isa = PBXGroup;
+			children = (
+				43EFA9261CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift */,
+			);
+			path = Throws;
 			sourceTree = "<group>";
 		};
 		86AEF2CCA2E5E232EECD7B43 /* Frameworks */ = {
@@ -531,14 +561,15 @@
 				432E94811CBFA09A006F692F /* Question.swift in Sources */,
 				4355D3B61CBEAD8500A79980 /* AppDelegate.swift in Sources */,
 				4355D3C11CBEAD8500A79980 /* ApproachingParsers.xcdatamodeld in Sources */,
+				43EFA9291CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift in Sources */,
 				4355D3C21CBEAD8500A79980 /* Parser.swift in Sources */,
 				432E94A81CBFA91C006F692F /* QuestionParserGuardAndNil.swift in Sources */,
 				432E94801CBFA09A006F692F /* Question+CoreDataProperties.swift in Sources */,
-				4355D3C31CBEAD8500A79980 /* QuestionsRetrievalOperation.swift in Sources */,
 				4355D3BD1CBEAD8500A79980 /* Page+CoreDataProperties.swift in Sources */,
 				4355D3BE1CBEAD8500A79980 /* Page.swift in Sources */,
 				4355D3BC1CBEAD8500A79980 /* Feed.swift in Sources */,
 				4355D3BA1CBEAD8500A79980 /* QueueManager.swift in Sources */,
+				43EFA9271CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift in Sources */,
 				4355D3C71CBEAD8500A79980 /* QuestionViewController.swift in Sources */,
 				432E94911CBFA1C3006F692F /* User+CoreDataProperties.swift in Sources */,
 				432E94921CBFA1C3006F692F /* User.swift in Sources */,
@@ -548,6 +579,7 @@
 				432E94A21CBFA8E7006F692F /* UserParserNoProtection.swift in Sources */,
 				432E94B51CBFCFAC006F692F /* UserParserThrows.swift in Sources */,
 				4355D3C51CBEAD8500A79980 /* QuestionsAPIManager.swift in Sources */,
+				43EFA92B1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift in Sources */,
 				4355D3C61CBEAD8500A79980 /* QuestionTableViewCell.swift in Sources */,
 				432E94AB1CBFA937006F692F /* UserParserGuardAndNil.swift in Sources */,
 			);

@@ -6,11 +6,10 @@
 //  Copyright © 2016 Boles. All rights reserved.
 //
 
-import UIKit
 import CoreData
 import CoreDataServices
 
-class QuestionsRetrievalOperation: NSOperation {
+class QuestionsRetrievalOperationThrowsParser: NSOperation {
     
     //MARK: Accessors
     
