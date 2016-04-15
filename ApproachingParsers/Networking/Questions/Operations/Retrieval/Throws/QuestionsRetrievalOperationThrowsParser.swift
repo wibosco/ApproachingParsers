@@ -69,31 +69,18 @@ class QuestionsRetrievalOperationThrowsParser: NSOperation {
                     
                     ServiceManager.sharedInstance.saveBackgroundManagedObjectContext()
                     
-                } catch let error as NSError {
-                    print("Failed to parse: \(error.localizedDescription)")
+                    /*----------------*/
                     
-                    self.callBackQueue.addOperationWithBlock({ () -> Void in
-                        if (self.completion != nil) {
-                            self.completion!(successful: false)
-                        }
-                    })
+                    if (self.completion != nil) {
+                        self.completion!(successful: true)
+                    }
+                    
+                } catch let error as NSError {
+                    self.exitOperationWithFailure(error)
                 }
             })
-            
-            /*----------------*/
-            
-            if (self.completion != nil) {
-                self.completion!(successful: true)
-            }
-            
         } catch let error as NSError {
-            print("Failed to load \(error.localizedDescription)")
-            
-            self.callBackQueue.addOperationWithBlock({ () -> Void in
-                if (self.completion != nil) {
-                    self.completion!(successful: false)
-                }
-            })
+            self.exitOperationWithFailure(error)
         }
     }
     
@@ -118,5 +105,20 @@ class QuestionsRetrievalOperationThrowsParser: NSOperation {
             let page = pages[index]
             page.index = index
         }
+    }
+    
+    //MARK: Failure
+    
+    func exitOperationWithFailure(error: NSError) {
+        print("Failed to parse: \(error.localizedDescription)")
+        
+        ServiceManager.sharedInstance.backgroundManagedObjectContext.rollback()
+        
+        self.callBackQueue.addOperationWithBlock({ () -> Void in
+            if (self.completion != nil) {
+                self.completion!(successful: false)
+            }
+        })
+
     }
 }

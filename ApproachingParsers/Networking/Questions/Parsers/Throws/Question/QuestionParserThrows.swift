@@ -14,6 +14,7 @@ class QuestionParserThrows: Parser {
     //MARK: Questions
     
     func parseQuestions(questionsRetrievalResponse: Dictionary<String, AnyObject>) throws -> Page {
+        
         let page = NSEntityDescription.insertNewObjectForEntity(Page.self, managedObjectContext: self.localManagedObjectContext) as! Page
         
         do {

@@ -93,7 +93,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         self.refresh()
     }
     
-    //MARK: DataRetrieval
+    //MARK: - DataRetrieval
     
     func refresh() {
         QuestionsAPIManager.retrieveQuestions(self.feed, refresh: true) { (successful) in
@@ -159,7 +159,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         self.refresh()
     }
     
-    //MARK: TableViewFetchedResultsControllerDelegate
+    //MARK: - TableViewFetchedResultsControllerDelegate
     
     func didUpdateContent() {
         self.pullToRefreshControl.endRefreshing()

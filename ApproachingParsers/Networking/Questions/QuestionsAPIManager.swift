@@ -27,7 +27,7 @@ class QuestionsAPIManager: NSObject {
         
         let task = session.dataTaskWithURL(url) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let operation = QuestionsRetrievalOperationThrowsParser.init(feedID: feedManagedObjectID, data: data!, refresh: refresh, completion: completion)
+                let operation = QuestionsRetrievalOperationValidator.init(feedID: feedManagedObjectID, data: data!, refresh: refresh, completion: completion)
                 
                 QueueManager.sharedInstance.queue.addOperation(operation)
             })
