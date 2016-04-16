@@ -22,12 +22,21 @@ class QuestionParserValidator: Parser {
         return userParser
     }()
     
+    private lazy var tagParsers: Array<TagParserValidator> = {
+       let tagParsers = Array<TagParserValidator>()
+        
+        return tagParsers
+    }()
+    
     //MARK: Validate
     
     func validate(response: Dictionary<String, AnyObject>) -> Bool {
+        print(response)
+        
         guard let questionID = response["question_id"] as? NSInteger,
             let title = response["title"] as? String,
-            let authorResponse = response["owner"] as? Dictionary<String, AnyObject> else {
+            let authorResponse = response["owner"] as? Dictionary<String, AnyObject>,
+            let tagsResponse = response["tags"] as? Array<String> else {
                 return false
         }
         
@@ -41,6 +50,20 @@ class QuestionParserValidator: Parser {
         if !self.userParser.validate(authorResponse) {
             return false
         }
+        
+        /*---------------*/
+        
+        for tag in tagsResponse {
+            let tagParser = TagParserValidator.init(managedObjectContext: self.localManagedObjectContext)
+            
+            if !tagParser.validate(tag) {
+                return false
+            }
+            
+            self.tagParsers.append(tagParser)
+        }
+        
+        /*---------------*/
         
         return true
     }
@@ -65,6 +88,12 @@ class QuestionParserValidator: Parser {
         /*----------------*/
         
         question?.author = self.userParser.parseUser()
+        
+        /*----------------*/
+        
+        for tagParser in self.tagParsers {
+          question?.addTagsObject(tagParser.parseTag())
+        }
         
         /*----------------*/
         

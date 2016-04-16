@@ -1,5 +1,5 @@
 //
-//  User+CoreDataProperties.swift
+//  Tag+CoreDataProperties.swift
 //  ApproachingParsers
 //
 //  Created by Home on 16/04/2016.
@@ -12,12 +12,9 @@
 import Foundation
 import CoreData
 
-extension User {
+extension Tag {
 
     @NSManaged var name: String?
-    @NSManaged var userID: NSNumber?
-    @NSManaged var profileURL: String?
-    @NSManaged var reputation: NSNumber?
-    @NSManaged var question: NSSet?
+    @NSManaged var questions: NSSet?
 
 }

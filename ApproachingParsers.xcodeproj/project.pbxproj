@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		432E94801CBFA09A006F692F /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E947C1CBFA09A006F692F /* Question+CoreDataProperties.swift */; };
-		432E94811CBFA09A006F692F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E947D1CBFA09A006F692F /* Question.swift */; };
-		432E94911CBFA1C3006F692F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E948F1CBFA1C3006F692F /* User+CoreDataProperties.swift */; };
 		432E94921CBFA1C3006F692F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E94901CBFA1C3006F692F /* User.swift */; };
 		432E94A01CBFA8E7006F692F /* QuestionParserNoProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E949D1CBFA8E7006F692F /* QuestionParserNoProtection.swift */; };
 		432E94A11CBFA8E7006F692F /* QuestionParserNoProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E949D1CBFA8E7006F692F /* QuestionParserNoProtection.swift */; };
@@ -46,6 +43,12 @@
 		43EFA9381CC1437400D496CE /* QuestionParserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFA9371CC1437400D496CE /* QuestionParserValidator.swift */; };
 		43EFA93A1CC1437F00D496CE /* UserParserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFA9391CC1437F00D496CE /* UserParserValidator.swift */; };
 		E0D710FD46DD318681E404F1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52256CA3740CB9C98F28BBB2 /* Pods.framework */; };
+		F49825DB1CC24B54001EF7BC /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825DA1CC24B54001EF7BC /* User+CoreDataProperties.swift */; };
+		F49825DE1CC256FF001EF7BC /* TagParserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825DD1CC256FF001EF7BC /* TagParserValidator.swift */; };
+		F49825E31CC257DB001EF7BC /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825DF1CC257DB001EF7BC /* Tag+CoreDataProperties.swift */; };
+		F49825E41CC257DB001EF7BC /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825E01CC257DB001EF7BC /* Tag.swift */; };
+		F49825E51CC257DB001EF7BC /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825E11CC257DB001EF7BC /* Question+CoreDataProperties.swift */; };
+		F49825E61CC257DB001EF7BC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49825E21CC257DB001EF7BC /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +63,6 @@
 
 /* Begin PBXFileReference section */
 		1DC2CAD78C60EDB28DE71B12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		432E947C1CBFA09A006F692F /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		432E947D1CBFA09A006F692F /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		432E948F1CBFA1C3006F692F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		432E94901CBFA1C3006F692F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		432E949D1CBFA8E7006F692F /* QuestionParserNoProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionParserNoProtection.swift; sourceTree = "<group>"; };
 		432E949F1CBFA8E7006F692F /* UserParserNoProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParserNoProtection.swift; sourceTree = "<group>"; };
@@ -95,6 +95,12 @@
 		43EFA9391CC1437F00D496CE /* UserParserValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParserValidator.swift; sourceTree = "<group>"; };
 		52256CA3740CB9C98F28BBB2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D52A4741A06C61642250E2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F49825DA1CC24B54001EF7BC /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F49825DD1CC256FF001EF7BC /* TagParserValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagParserValidator.swift; sourceTree = "<group>"; };
+		F49825DF1CC257DB001EF7BC /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F49825E01CC257DB001EF7BC /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		F49825E11CC257DB001EF7BC /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F49825E21CC257DB001EF7BC /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F4BFB2D31C8227FB00DECA5E /* ApproachingParsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApproachingParsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BFB2EA1C8227FB00DECA5E /* ApproachingParsers.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApproachingParsers.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -240,10 +246,12 @@
 				43EFA92C1CC104B900D496CE /* Feed+CoreDataProperties.swift */,
 				4355D39F1CBEAD8500A79980 /* Page.swift */,
 				4355D39E1CBEAD8500A79980 /* Page+CoreDataProperties.swift */,
-				432E947D1CBFA09A006F692F /* Question.swift */,
-				432E947C1CBFA09A006F692F /* Question+CoreDataProperties.swift */,
+				F49825E21CC257DB001EF7BC /* Question.swift */,
+				F49825E11CC257DB001EF7BC /* Question+CoreDataProperties.swift */,
+				F49825E01CC257DB001EF7BC /* Tag.swift */,
+				F49825DF1CC257DB001EF7BC /* Tag+CoreDataProperties.swift */,
 				432E94901CBFA1C3006F692F /* User.swift */,
-				432E948F1CBFA1C3006F692F /* User+CoreDataProperties.swift */,
+				F49825DA1CC24B54001EF7BC /* User+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 			children = (
 				43EFA9321CC1432C00D496CE /* Page */,
 				43EFA9331CC1432C00D496CE /* Question */,
+				F49825DC1CC256E6001EF7BC /* Tag */,
 				43EFA9341CC1432C00D496CE /* User */,
 			);
 			path = Validator;
@@ -436,6 +445,14 @@
 				1DC2CAD78C60EDB28DE71B12 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F49825DC1CC256E6001EF7BC /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				F49825DD1CC256FF001EF7BC /* TagParserValidator.swift */,
+			);
+			path = Tag;
 			sourceTree = "<group>";
 		};
 		F4BFB2CA1C8227FB00DECA5E = {
@@ -610,25 +627,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				432E94811CBFA09A006F692F /* Question.swift in Sources */,
 				4355D3B61CBEAD8500A79980 /* AppDelegate.swift in Sources */,
 				4355D3C11CBEAD8500A79980 /* ApproachingParsers.xcdatamodeld in Sources */,
 				43EFA9291CC0F7C900D496CE /* QuestionsRetrievalOperationNoProtectionParser.swift in Sources */,
 				4355D3C21CBEAD8500A79980 /* Parser.swift in Sources */,
 				43EFA9381CC1437400D496CE /* QuestionParserValidator.swift in Sources */,
 				432E94A81CBFA91C006F692F /* QuestionParserGuardAndNil.swift in Sources */,
-				432E94801CBFA09A006F692F /* Question+CoreDataProperties.swift in Sources */,
 				4355D3BD1CBEAD8500A79980 /* Page+CoreDataProperties.swift in Sources */,
 				4355D3BE1CBEAD8500A79980 /* Page.swift in Sources */,
 				4355D3BC1CBEAD8500A79980 /* Feed.swift in Sources */,
+				F49825DB1CC24B54001EF7BC /* User+CoreDataProperties.swift in Sources */,
 				4355D3BA1CBEAD8500A79980 /* QueueManager.swift in Sources */,
 				43EFA9271CC0F78000D496CE /* QuestionsRetrievalOperationThrowsParser.swift in Sources */,
+				F49825DE1CC256FF001EF7BC /* TagParserValidator.swift in Sources */,
+				F49825E61CC257DB001EF7BC /* Question.swift in Sources */,
+				F49825E51CC257DB001EF7BC /* Question+CoreDataProperties.swift in Sources */,
 				4355D3C71CBEAD8500A79980 /* QuestionViewController.swift in Sources */,
-				432E94911CBFA1C3006F692F /* User+CoreDataProperties.swift in Sources */,
 				432E94921CBFA1C3006F692F /* User.swift in Sources */,
 				43EFA9301CC142E100D496CE /* QuestionsRetrievalOperationValidator.swift in Sources */,
 				432E94A01CBFA8E7006F692F /* QuestionParserNoProtection.swift in Sources */,
 				432E94B21CBFCFA0006F692F /* QuestionParserThrows.swift in Sources */,
+				F49825E31CC257DB001EF7BC /* Tag+CoreDataProperties.swift in Sources */,
 				432E94A21CBFA8E7006F692F /* UserParserNoProtection.swift in Sources */,
 				432E94B51CBFCFAC006F692F /* UserParserThrows.swift in Sources */,
 				4355D3C51CBEAD8500A79980 /* QuestionsAPIManager.swift in Sources */,
@@ -637,6 +656,7 @@
 				43EFA92B1CC0F7FB00D496CE /* QuestionsRetrievalOperationGuardAndNilParser.swift in Sources */,
 				4355D3C61CBEAD8500A79980 /* QuestionTableViewCell.swift in Sources */,
 				432E94AB1CBFA937006F692F /* UserParserGuardAndNil.swift in Sources */,
+				F49825E41CC257DB001EF7BC /* Tag.swift in Sources */,
 				43EFA92D1CC104B900D496CE /* Feed+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

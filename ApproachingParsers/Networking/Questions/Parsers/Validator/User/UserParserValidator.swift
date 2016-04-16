@@ -15,17 +15,23 @@ class UserParserValidator: Parser {
     
     var userID: NSInteger?
     var name: String?
+    var reputation: NSInteger?
+    var profileURL: String?
     
     //MARK: Validate
     
     func validate(response: Dictionary<String, AnyObject>) -> Bool {
         guard let userID = response["user_id"] as? NSInteger,
-            let name = response["display_name"] as? String else {
+            let name = response["display_name"] as? String,
+            let reputation = response["reputation"] as? NSInteger,
+            let profileURL = response["link"] as? String else {
                 return false
         }
 
         self.userID = userID
         self.name = name
+        self.reputation = reputation
+        self.profileURL = profileURL
         
         /*---------------*/
         
@@ -48,10 +54,11 @@ class UserParserValidator: Parser {
         /*----------------*/
         
         user?.name = self.name
+        user?.reputation = self.reputation
+        user?.profileURL = self.profileURL
         
         /*----------------*/
         
         return user!
     }
-
 }

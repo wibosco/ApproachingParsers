@@ -74,6 +74,8 @@ class QuestionsRetrievalOperationValidator: NSOperation {
                         
                         self.exitOperationWithSuccess()
                     } else {
+                        print("Failed validation")
+                        
                         self.exitOperationWithFailure()
                     }
                 } catch let error as NSError {
